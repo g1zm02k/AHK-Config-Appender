@@ -3,7 +3,7 @@ S:=rSize(A_ScriptName)
 
 D:=E-S
 MsgBox("Name:`t" A_ScriptName
-   . "`nComp:`t" E
+   . "`nSize:`t" E
    . "`nDiff:`t" ((D<0)?"Orig":D "b larger."))
 
 gSize(File){

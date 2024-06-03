@@ -25,7 +25,7 @@ sFile(Src,Cfg,Exe?){  ;Split Src into original Exe and Cfg
 }
 iFile(Src){  ;Get info from bundled Src; namely the position/sizes of Exe, Cfg, and Dat (size info)
   M:=gSize(Src),P:=rSize(Src),S:=M-P-4
-  Return ("Name:`t" Src "`nExe:`t0 > " P " (" P ")`nCfg:`t" P+1 " > " M-4 " (" S ")`nDat:`t" M-3 " > " M " (4)")
+  Return ("Name:`t" Src " (" M ")`nExe:`t0 > " P " (" P ")`nCfg:`t" P+1 " > " M-4 " (" S ")`nDat:`t" M-3 " > " M " (4)")
 }
 eFile(Src,Cfg){  ;Extract Cfg from bundled Src
   M:=gSize(Src),P:=rSize(Src),S:=M-P-4
