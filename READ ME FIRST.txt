@@ -1,0 +1,23 @@
+'Test.ahk' (soon to be 'Test.exe') and 'Conf.txt' are the basis of this whole experiment.
+
+Compile 'Test.ahk' to an exe and run it if you like to see what it'll show.
+
+You can now try out 'TestMod.ahk' (previously 'ModT.ahk') to see what happens when you copy 'Test.exe' to 'TestMod.exe' and append the file size to it - run that to see how it reads the original file size from the appended info and thus deduces the addition of 4 bytes.
+
+You can also try out the beast that is '_MainTest.ahk'...
+
+This will first copy 'Test.exe' to '_Test.exe', then it'll append the 'Conf.txt' file to it and write the 4-byte split point data to the end; it'll run the packed exe automatically to show you how it's bundled.
+
+Once you close the MsgBox, it'll extract, read, delete, and then show the config file to show how simple it is to read it in without leaving a mess.
+
+Finally, upon closing this MsgBox, it'll split the bundle back into the default exe and config files - with new names so you can compare them if need be; '__Exe.exe' and '__Cfg.txt' respectively.
+
+'Args.ahk' requires compiling to work as intended; it was just to test parameter receiving, nothing special (that's how I discovered it wasn't working via pure script form).
+
+'InOut.ahk' is just the initial stages of '_MainTest.ahk' before I split off to avoid messing up any of the initial code.
+
+Finally, 'Dupe.ahk' (again, needs to be compiled) is a simple test to copy itself to a file called 'Fixer.exe' and run it to test how easy it would be to make the script trigger command line stuff - 'Fixer.exe's command line argument is set to immediately close and delete 'Dupe.exe'...
+
+Running 'Fixer.exe' manually will run the other option, which is just set to display a MsgBox and exit.
+
+So there you have it, several hours of feverishly beavering away trying to understand how to make stuff like 'Buffer()' work and how to append and extract files to executables - there should be enough there to get to grips with my original idea to just bundle the files together and work from there.
