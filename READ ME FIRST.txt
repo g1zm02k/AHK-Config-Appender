@@ -1,6 +1,6 @@
 'Test.ahk' (soon to be 'Test.exe') and 'Conf.txt' are the basis of this whole experiment.
 
-Compile 'Test.ahk' to an exe and run it if you like to see what it'll show.
+Compile 'Test.ahk' to an exe (we'll be working off this); you run it if you like, to see what it'll show - it's name, size, and any difference from the initial size (hint: this will be more useful later).
 
 You can now try out 'TestMod.ahk' (previously 'ModT.ahk') to see what happens when you copy 'Test.exe' to 'TestMod.exe' and append the file size to it - run that to see how it reads the original file size from the appended info and thus deduces the addition of 4 bytes.
 
